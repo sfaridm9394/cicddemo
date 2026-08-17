@@ -3,6 +3,11 @@ variable "vpc_id" {
 }
 
 variable "cidr_block" {
-    type = list(string)
-  default = "0.0.0.0/0"
+  type    = list(string)
+  default = ["0.0.0.0/0"]
+}
+
+variable "SGname" {
+    default = "SGname"
+  
 }
