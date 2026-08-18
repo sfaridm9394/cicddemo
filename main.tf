@@ -21,8 +21,8 @@ module "SG" {
 module "ec2" {
   source = "git::https://github.com/sfaridm9394/cicddemo.git//modules/ec2?ref=dev"
 
-  ami_id          = var.ami_id
-  instancetype    = var.instancetype
-  subnet_id       = module.VPC.public_subnet_id
-  security_group_id = module.SG.security_group_id
+  ami_id            = var.ami_id
+  instancetype      = var.instancetype
+  subnet_id         = module.VPC.public_subnet_id
+  security_group_id = module.SG.MyVPCSG_id
 }
